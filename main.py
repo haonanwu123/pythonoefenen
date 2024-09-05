@@ -51,7 +51,7 @@ def generate_password(length):
     ]
 
     all_characters = lowercase + uppercase + digit + special_character
-    password += random.choices(all_characters, k=length)
+    password += random.choices(all_characters, k=length - len(password))
 
     random.shuffle(password)
 
