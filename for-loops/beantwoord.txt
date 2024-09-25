@@ -1,0 +1,9 @@
+1. what is loops ?
+In Python worden loops gebruikt om een ​​codeblok meerdere keren te herhalen. 
+Ze zijn essentieel voor het automatiseren van repetitieve taken en het 
+itereren door datastructuren zoals lists, tupels, dictionaries en meer.
+
+2. veschill tussen een 'for' en een 'while' loop ?
+For-loop herhalen een bepaalde bewerking door middel van reeds bekende gegevens, 
+terwijl while-loop herhaald worden zolang de voorwaarde waar is,
+en stoppen zodra de voorwaarde niet langer waar is.

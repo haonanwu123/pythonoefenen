@@ -1,4 +1,3 @@
-# Pizza types and slicing options
 VEGETARIAN_PIZZAS = ["Margherita", "Quatro Formaggi", "Hawaii"]
 NON_VEGETARIAN_PIZZAS = ["Pepperoni", "Quatro Stagioni", "Al Tonno"]
 
@@ -30,29 +29,22 @@ def get_pizza_preferences(num_people):
     return preferences
 
 def main():
-    # Input: number of people and pizzas
     num_people = int(input("Enter the number of people in the group: "))
     num_pizzas = int(input("Enter the number of pizzas ordered: "))
     
-    # Input: slices per pizza
     slices_per_pizza = int(input("How many slices does each pizza have? (e.g., 4, 6, 8, or 12): "))
     
-    # Input: number of vegetarian and non-vegetarian pizzas
     veg_pizzas = int(input("Enter the number of vegetarian pizzas: "))
-    non_veg_pizzas = num_pizzas - veg_pizzas  # Non-veg pizzas is the remaining amount
+    non_veg_pizzas = num_pizzas - veg_pizzas
     
-    # Calculate total slices
     total_slices = num_pizzas * slices_per_pizza
     veg_slices = veg_pizzas * slices_per_pizza
     non_veg_slices = non_veg_pizzas * slices_per_pizza
 
-    # Distribute slices equally among people
     slices_per_person, leftover_slices = distribute_slices(total_slices, num_people)
-    
-    # Collect pizza preferences from each person
+  
     preferences = get_pizza_preferences(num_people)
     
-    # Display the results
     print("\nPizza Distribution Results:")
     print(f"Each person can have {slices_per_person} slices.")
     print(f"There are {leftover_slices} leftover slices.")
