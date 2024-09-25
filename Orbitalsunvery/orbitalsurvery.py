@@ -74,7 +74,7 @@ def analyse_scan(rows: int, cols: int, datastream: int) -> int:
 
 
 def main():
-    with open("./orbitalsuverydata.txt") as datafile:
+    with open("./Orbitalsunvery/orbitalsuverydata.txt") as datafile:
         for datafileline in datafile.readlines():
             r, c, a = map(int, datafileline.split(","))
             highest = analyse_scan(r, c, a)
