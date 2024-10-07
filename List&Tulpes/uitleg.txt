@@ -1,0 +1,7 @@
+List:
+list is een geordende verzameling van elementen. die is veranderlijk, dat betekent
+de list kan update, verwijderen en toevoegen.
+
+Tulpes:
+Tulpes is ook eeen geordnde verzameling van elementen, maar die is niet veranderlijk, dat 
+vetekent de tulpes kan niet update, verwijderen en toevoegen.
