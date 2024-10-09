@@ -1,21 +1,40 @@
-def calculate_fare(distance):
-    base_fare = 4.00
-    fare_per_140m = 0.25
+def next_verse(verse_number: int) -> str:
+    gifts = [
+        "A partridge in a pear tree",
+        "Two turtledoves",
+        "Three French hens",
+        "Four calling birds",
+        "fivegoldrings(Five golden rings)",
+        "Six geese a-laying",
+        "Seven swans a-swimming",
+        "Eight maids a-milking",
+        "Nine ladies dancing",
+        "Ten lords a-leaping",
+        "Eleven pipers piping",
+        "Twelve drummers drumming"
+    ]
+
+    ordinal = ["1st", "2nd", "3rd"] + [f"{i}th" for i in range(4, 13)]
     
-    distance_meters = distance * 1000
+    verse = f"On the {ordinal[verse_number - 1]} day of Christmas, my true love sent to me"
     
-    segments = distance_meters / 140
+    if verse_number == 1:
+        gift1 = " " + gifts[0]
+        verse += gift1
+    else:
+        for i in range(verse_number - 1, 0, -1):
+            if i == verse_number - 1:
+                verse += " " + gifts[i]
+            else:
+                verse += ", " + gifts[i]
+        verse += " And " + gifts[0]
     
-    total_fare = base_fare + (segments * fare_per_140m)
-    
-    return total_fare
+    return verse
+
 
 def main():
-    distance = float(input("Distance traveled (in kilometers): "))
-    
-    fare = calculate_fare(distance)
-    
-    print(f"Total fare: {fare:.2f} EUR")
+    for day in range(1, 13):
+        print(next_verse(day))
 
 if __name__ == "__main__":
     main()
