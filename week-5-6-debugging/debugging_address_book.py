@@ -18,12 +18,12 @@ def delete_contact(name):
     for contact in contacts:
         if contact['name'].lower() == name.lower():
             contacts.remove(contact)
-
+            return  # Voeg return toe om te stoppen na verwijdering
 
 def update_contact(name, phone_numbers, email):
     for contact in contacts:
         if contact['name'].lower() == name.lower():
-            contact['phone_numbers'] = name
+            contact['phone_numbers'] = phone_numbers  # Corrigeer de toewijzing hier
             contact['email'] = email
             break
 
@@ -31,8 +31,7 @@ def update_contact(name, phone_numbers, email):
 def main():
     add_contact("John Doe", ["1234567890", "9876543210"], "john@example.com")
     add_contact("Jane Smith", ["5555555555"], "jane@example.com")
-    add_contact("Bob Johnson", ["1111111111",
-                "2222222222", "3333333333"], "bob@example.com")
+    add_contact("Bob Johnson", ["1111111111", "2222222222", "3333333333"], "bob@example.com")
 
     search_term = input("Enter a name to search: ")
     search_results = search_contacts(search_term)
@@ -51,8 +50,7 @@ def main():
     print("Contact deleted successfully.")
 
     update_name = input("Enter the name of the contact to update: ")
-    update_phone_numbers = input(
-        "Enter the new phone numbers (separated by commas): ").split(".")
+    update_phone_numbers = input("Enter the new phone numbers (separated by commas): ").split(",")  # Wijzig hier naar ","
     update_email = input("Enter the new email address: ")
     update_contact(update_name, update_phone_numbers, update_email)
     print("Contact updated successfully.")
