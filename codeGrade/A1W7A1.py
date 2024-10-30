@@ -56,7 +56,7 @@ def main():
         "Please enter a key string (or press Enter to use default key): "
     ).strip()
 
-    if set_dict_key(key_input) == False:
+    if set_dict_key(key_input) is False:
         return
 
     while True:

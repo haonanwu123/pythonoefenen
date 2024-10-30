@@ -48,12 +48,14 @@ def add_contact(
 
 def remove_contact(addressbook: list, contact_id: int):
     """Remove a contact by ID."""
-    for contact in addressbook:
-        if contact["id"] == contact_id:
-            addressbook.remove(contact)
-            print(f"Contact with ID {contact_id} removed.")
-            return
-    print(f"No contact found with ID {contact_id}.")
+    # Use a list comprehension to filter the addressbook
+    original_length = len(addressbook)
+    addressbook[:] = [contact for contact in addressbook if contact["id"] != contact_id]
+
+    if len(addressbook) < original_length:
+        print(f"Contact with ID {contact_id} removed.")
+    else:
+        print(f"No contact found with ID {contact_id}.")
 
 
 def merge_contacts(addressbook: list):
