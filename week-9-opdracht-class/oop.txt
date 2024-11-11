@@ -1,0 +1,34 @@
+Objectgericht Programmeren (Object-Oriented Programming, OOP)
+
+
+. Wat is een Object in Python?
+In Python is een object een instantie van een klasse.
+Het is een entiteit die eigenschappen (attributen) en gedrag (methoden) heeft en waarmee je werkt in een programma. 
+
+
+. Wat is een klasse en hoe kun je een klasse definiëren in Python?
+Een klasse is een blauwdruk of sjabloon voor het maken van objecten. 
+Het beschrijft de eigenschappen (attributen) en gedragingen (methoden) die elk object van die klasse zal hebben.
+Klassen maken het mogelijk om code georganiseerd en herbruikbaar te houden.
+
+
+. Hoe kun je een object maken en gebruiken vanuit een klasse?
+Een object maak je door een klasse te instantiëren. 
+Dit doe je door de klassennaam te gebruiken, gevolgd door haakjes waarin je eventuele benodigde argumenten plaatst.
+
+
+. Wat zijn attributen?
+Attributen zijn variabelen die zijn opgeslagen in een object. 
+Ze vertegenwoordigen de eigenschappen of data die aan een object zijn gekoppeld. 
+In Python worden attributen meestal gedefinieerd binnen de __init__-methode van een klasse, en worden ze vaak voorafgegaan door self, wat verwijst naar de huidige instantie van het object.
+
+
+. Wat is een methode?
+Een methode is een functie die is gedefinieerd binnen een klasse en die een object-actie of -gedrag vertegenwoordigt.
+Methodes hebben toegang tot het object zelf via het self-argument, waardoor ze de attributen van het object kunnen lezen en manipuleren.
+
+
+
+. Hoe initialiseert je een instantie (object)?
+Een object initialiseert je door de constructor van de klasse aan te roepen, die meestal de __init__-methode is.
+Deze methode wordt automatisch aangeroepen wanneer je een nieuw object maakt en kan worden gebruikt om initiële waarden aan de attributen van het object toe te wijzen.
