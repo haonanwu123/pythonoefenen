@@ -22,11 +22,9 @@ class CarParkingMachine:
         check_in: datetime = None,
     ) -> bool:
         if len(self.parked_cars) >= self.capacity:
-            print("Capacity reached!")
             return False
         check_in = check_in or datetime.now()
         self.parked_cars[license_plate] = ParkedCar(license_plate, check_in)
-        print("License registered")
         return True
 
     def check_out(self, license_plate: str) -> float:
@@ -35,7 +33,6 @@ class CarParkingMachine:
             return 0.0
         fee = self.get_parking_fee(license_plate)
         del self.parked_cars[license_plate]  # Remove car from the lot
-        print(f"Parking fee: {fee:.2f} euro")
         return fee
 
     def get_parking_fee(self, license_plate: str) -> float:
@@ -62,10 +59,13 @@ def main():
         if choice == "I":
             license_plate = input("License: ").strip().upper()
             parking_machine.check_in(license_plate)
-
+            if not parking_machine.check_in(license_plate):
+                print("Capacity reached")
+            else:
+                print("License registered")
         elif choice == "O":
             license_plate = input("License: ").strip().upper()
-            parking_machine.check_out(license_plate)
+            print(f"Parking fee: {parking_machine.check_out(license_plate):.2f} euro")
 
         elif choice == "Q":
             print("Exiting program.")
