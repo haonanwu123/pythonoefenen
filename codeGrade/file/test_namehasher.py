@@ -3,7 +3,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
-from codeGrade.A1W7A1 import (
+from codeGrade.A2W7A1 import (
     set_dict_key,
     encode_string,
     decode_string,
