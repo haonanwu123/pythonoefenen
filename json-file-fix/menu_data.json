@@ -1,0 +1,25 @@
+{
+    "menu": {
+      "breakfast": {
+        "items": [
+          {"name": "Pancakes", "price": 8.99},
+          {"name": "Omelette", "price": 9.99},
+          {"name": "French Toast", "price": 7.49}
+        ]
+      },
+      "lunch": {
+        "items": [
+          {"name": "Caesar Salad", "price": 10.99},
+          {"name": "Chicken Wrap", "price": 12.49},
+          {"name": "Vegetarian Pizza", "price": 14.99}
+        ]
+      },
+      "dinner": {
+        "items": [
+          {"name": "Grilled Salmon", "price": 18.99},
+          {"name": "Steak with Potatoes", "price": 22.99},
+          {"name": "Pasta Alfredo", "price": 15.99}
+        ]
+      }
+    }
+}
