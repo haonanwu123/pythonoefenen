@@ -1,3 +1,4 @@
 21-11-2024 10:59:52;cpm_name=TestCPM;license_plate=AB-123-CD;action=check-in
 21-11-2024 10:59:52;cpm_name=TestCPM;license_plate=AB-123-CD;action=check-out;parking_fee=4.00
 21-11-2024 10:59:52;cpm_name=TestCPM;license_plate=AB-123-CD;action=check-in
+01-12-2024 15:44:58;cpm_name=1;license_plate=123-AB-23;action=check-in
