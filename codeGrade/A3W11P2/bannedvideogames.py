@@ -115,26 +115,28 @@ def add_new_game(data, filename):
         filename (str): Path to the CSV file to save the updated data.
     """
     keys = [
-        "id",
-        "name",
-        "series",
-        "country",
-        "details",
-        "category",
-        "status",
-        "wikipedia",
-        "image",
-        "summary",
-        "developer",
-        "publisher",
-        "genre",
-        "homepage",
+        "Id",
+        "Game",
+        "Series",
+        "Country",
+        "Details",
+        "Ban Category",
+        "Ban Status",
+        "Wikipedia Profile",
+        "Image",
+        "Summary",
+        "Developer",
+        "Publisher",
+        "Genre",
+        "Homepage",
     ]
     new_game = {}
     for key in keys:
         new_game[key] = input(f"{key}: ")
     data.append(new_game)
-    with open(filename, mode="w", newline="", encoding="utf-8") as file:
+    with open(
+        os.path.join(sys.path[0], filename), mode="w", newline="", encoding="utf-8"
+    ) as file:
         writer = csv.DictWriter(file, fieldnames=keys)
         writer.writeheader()
         writer.writerows(data)
