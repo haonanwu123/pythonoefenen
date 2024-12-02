@@ -3,6 +3,8 @@ import json
 from datetime import datetime
 import math
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 # Logger class to handle logging actions to a file
 class CarParkingLogger:
@@ -23,7 +25,7 @@ class CarParkingLogger:
             log_file (str, optional): The log file path. Defaults to 'carparklog.txt'.
         """
         self.id = id
-        self.log_file = log_file
+        self.log_file = os.path.join(BASE_DIR, log_file)
 
     def log_action(
         self, license_plate: str, action: str, parking_fee: float = None
@@ -59,7 +61,10 @@ class JSONStateManager:
         Args:
             id (str): The unique identifier for the car parking machine.
         """
-        self.file_path = f"{id}.json"
+        self.file_path = os.path.join(BASE_DIR, f"{id}_state.json")
+        if not os.path.exists(self.file_path):
+            with open(self.file_path, "w") as file:
+                json.dump([], file)
 
     def save_state(self, parked_cars: dict):
         """
