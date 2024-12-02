@@ -239,4 +239,4 @@ def main(filename: str) -> None:
 
 
 if __name__ == "__main__":
-    main("file/bannedvideogames.csv")
+    main("bannedvideogames.csv")

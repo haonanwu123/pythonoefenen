@@ -11,7 +11,7 @@ def load_movie():
         list: A list of dictionaries where each dictionary represents a movie.
     """
     try:
-        with open(os.path.join(sys.path[0], "file/movies.json"), "r") as file:
+        with open(os.path.join(sys.path[0], "movies.json"), "r") as file:
             return json.load(file)
     except FileNotFoundError:
         print("Error: The 'movies.json' file was not found.")
@@ -27,7 +27,7 @@ def save_movie(movies):
         movies (list): A list of movie dictionaries to be saved.
     """
     try:
-        with open(os.path.join(sys.path[0], "file/movies.json"), "w") as file:
+        with open(os.path.join(sys.path[0], "movies.json"), "w") as file:
             json.dump(movies, file, indent=4)
     except FileNotFoundError:
         print("Error: The 'movies.json file was not found.")
